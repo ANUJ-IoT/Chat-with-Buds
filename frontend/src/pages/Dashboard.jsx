@@ -203,7 +203,7 @@ export default function Dashboard() {
             <section className="overflow-y-auto">
               {!contacts ? (
                 <p className="flex flex-1 items-center justify-center text-2xl mt-10">
-                  No conversations yet!
+                  Serch it - Click it - And go...
                 </p>
               ) : (
                 contacts.map((conversation) => (
