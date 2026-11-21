@@ -35,8 +35,6 @@ export default function Authentication() {
       return;
     }
 
-    console.log(signUpUser.password.length);
-
     const response = await registerUser(signUpUser);
 
     if (response.message !== "Successfull.") {
