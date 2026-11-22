@@ -2,4 +2,9 @@
 
 @theme {
   --color-BackColor: #adc178;
+  --color-List: #d5bdaf;
+  --color-from: #c9ffbf;
+  --color-to: #ffafbd;
+  --color-from2: #9796f0;
+  --color-to2: #fbc7d4;
 }

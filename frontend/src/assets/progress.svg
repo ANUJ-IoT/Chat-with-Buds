@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+<title>Under construction — construction worker</title>
+<desc>Modern friendly vector illustration of a construction worker in a yellow hard hat and safety vest holding a blueprint beside a small construction sign.</desc>
+<defs>
+ <linearGradient id="vest" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffd95b"/><stop offset="1" stop-color="#f5a900"/></linearGradient>
+ <linearGradient id="helmet" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffe57b"/><stop offset="1" stop-color="#f5b51b"/></linearGradient>
+ <style>
+ .ink{stroke:#243746;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
+ .soft{stroke:#243746;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+ </style>
+</defs>
+<!-- soft backdrop -->
+<circle cx="402" cy="286" r="228" fill="#f3f8fb"/>
+<circle cx="402" cy="286" r="192" fill="#e8f1f5"/>
+<!-- little decorative construction marks -->
+<path d="M132 190h42m-21-21v42M632 170h32m-16-16v32" stroke="#c6d8e2" stroke-width="6" stroke-linecap="round"/>
+<path d="M590 405l15-15 15 15-15 15z" fill="#d2e1e9"/>
+<!-- ground -->
+<ellipse cx="402" cy="532" rx="250" ry="24" fill="#dce7ec"/>
+<!-- worker legs -->
+<path d="M326 375l-12 105-8 35q-2 14 13 16h61q15-2 11-17l-7-34 18-92z" fill="#344f68" class="ink"/>
+<path d="M407 378l20 102-1 36q0 15 15 15h61q15-2 10-17l-20-48-4-101z" fill="#344f68" class="ink"/>
+<!-- trouser seams -->
+<path d="M359 397l-9 118M432 405l22 111" fill="none" stroke="#243746" stroke-width="5" opacity=".35"/>
+<!-- boots -->
+<path d="M318 503h61l18 24q9 15-9 20h-80q-15-2-8-17z" fill="#f7fafb" class="ink"/>
+<path d="M440 503h60l20 24q8 15-10 20h-78q-15-2-8-17z" fill="#f7fafb" class="ink"/>
+<path d="M311 533h80M433 533h88" stroke="#a8b9c3" stroke-width="6" stroke-linecap="round"/>
+<!-- torso -->
+<path d="M328 203q25-22 59-22h39q35 3 55 30l20 138q3 20-17 27l-48 15H333l-39-18q-17-8-12-26z" fill="#f4f7f8" class="ink"/>
+<!-- neck -->
+<path d="M376 170v39q24 22 49 0v-39z" fill="#d99b75" class="soft"/>
+<!-- arms behind vest -->
+<path d="M324 223l-42 79q-9 17 7 30l41 24 20-28-28-23 33-54z" fill="#e7ad87" class="ink"/>
+<path d="M470 224l45 77q10 17-7 31l-42 24-20-28 29-23-34-54z" fill="#e7ad87" class="ink"/>
+<!-- hi-vis vest -->
+<path d="M350 190l39 26 19 28 19-28 39-26 22 161-38 12-19-89h-48l-19 89-38-12z" fill="url(#vest)" class="ink"/>
+<!-- reflective bands -->
+<path d="M337 309h141M342 340h132" stroke="#fff8d8" stroke-width="13" stroke-linecap="round"/>
+<!-- collar -->
+<path d="M389 216l19 28 19-28-10-15h-18z" fill="#f7fbfc" class="soft"/>
+<!-- face -->
+<path d="M365 118q0-49 52-49t52 49l-5 49q-8 34-47 39-39-5-47-39z" fill="#e7ad87" class="ink"/>
+<!-- ears -->
+<path d="M366 137q-24-15-23 8 3 22 26 19M468 137q24-15 23 8-3 22-26 19" fill="#e7ad87" class="soft"/>
+<!-- hair -->
+<path d="M365 129q-18-26-5-51 13-27 50-28 45-3 61 30 10 20 0 48l-15-21-22-13-29 13-25-5z" fill="#3b302e" class="ink"/>
+<!-- face details -->
+<path d="M389 145q7 5 14 0M432 145q7 5 14 0" fill="none" stroke="#243746" stroke-width="6" stroke-linecap="round"/>
+<path d="M415 149l-5 17 12 2" fill="none" stroke="#bf805f" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M397 181q18 12 36-1" fill="none" stroke="#9c5b49" stroke-width="6" stroke-linecap="round"/>
+<!-- hard hat -->
+<path d="M350 112q6-62 67-63 61 1 67 63z" fill="url(#helmet)" class="ink"/>
+<path d="M339 111q78-16 156 0 2 19-19 22H358q-21-3-19-22z" fill="#ffd85b" class="ink"/>
+<path d="M417 53v45" stroke="#e2a20c" stroke-width="9" stroke-linecap="round"/>
+<!-- rolled blueprint held across body -->
+<g transform="rotate(-8 405 305)">
+ <rect x="362" y="260" width="124" height="104" rx="10" fill="#eaf6ff" class="ink"/>
+ <path d="M379 280h88M379 298h71M379 316h83M379 334h57" stroke="#6da8cb" stroke-width="5" stroke-linecap="round"/>
+ <circle cx="468" cy="350" r="7" fill="#6da8cb"/>
+</g>
+<!-- hands on plan -->
+<path d="M348 313q13-12 25-1l14 11q9 10-3 19l-22 10q-13 5-21-7l-6-13z" fill="#e7ad87" class="soft"/>
+<path d="M472 313q13-10 24 1l9 11q7 10-4 17l-18 8q-12 4-19-7l-5-13z" fill="#e7ad87" class="soft"/>
+<!-- small sign on right -->
+<g transform="translate(600 330)">
+ <path d="M28 104V176M91 104V176" stroke="#8b9da7" stroke-width="11" stroke-linecap="round"/>
+ <path d="M0 176h120" stroke="#8b9da7" stroke-width="10" stroke-linecap="round"/>
+ <rect x="-8" y="0" width="136" height="110" rx="13" fill="#fff" class="ink"/>
+ <rect x="2" y="10" width="116" height="90" rx="7" fill="#fff3c7"/>
+ <path d="M60 24L34 70h52z" fill="#f5b51b" class="soft"/>
+ <path d="M60 40v15m0 8v1" stroke="#243746" stroke-width="7" stroke-linecap="round"/>
+</g>
+<!-- tiny cones -->
+<g transform="translate(160 465)">
+ <path d="M0 53l22-49q4-9 9 0l22 49z" fill="#f5a900" class="soft"/>
+ <path d="M11 31h31" stroke="#fff4d1" stroke-width="9"/>
+ <path d="M-7 57h68" stroke="#8b9da7" stroke-width="8" stroke-linecap="round"/>
+</g>
+<g transform="translate(555 475) scale(.78)">
+ <path d="M0 53l22-49q4-9 9 0l22 49z" fill="#f5a900" class="soft"/>
+ <path d="M11 31h31" stroke="#fff4d1" stroke-width="9"/>
+ <path d="M-7 57h68" stroke="#8b9da7" stroke-width="8" stroke-linecap="round"/>
+</g>
+</svg>

@@ -89,7 +89,7 @@ export default function Authentication() {
           style={{ backgroundImage: `url(${BG})` }}
         >
           {form ? (
-            <div className="p-10 mx-70 bg-linear-to-r from-white to-gray-600 rounded-2xl">
+            <div className="p-10 mx-70 bg-linear-to-r from-from to-to rounded-2xl">
               <div className="mb-5">
                 {/* //TODO: check why the h1 tags are not working */}
                 <p className="font-extrabold w-auto text-2xl">
@@ -140,7 +140,7 @@ export default function Authentication() {
               </span>
             </div>
           ) : (
-            <div className="p-10 mx-70 bg-linear-to-r from-gray-500 to-white rounded-2xl">
+            <div className="p-10 mx-70 bg-linear-to-r from-from2 to-to2 rounded-2xl">
               <div className="mb-5">
                 {/* //TODO: check why the h1 tags are not working */}
                 <p className="font-extrabold w-auto text-2xl">

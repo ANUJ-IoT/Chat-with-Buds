@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import BackImage from "../assets/ChatAppBack.png";
 import {
   Search,
@@ -7,6 +7,9 @@ import {
   UserIcon,
   Menu,
   LogOut,
+  Sun,
+  Moon,
+  Settings,
 } from "lucide-react";
 import { useAuth } from "../context/Context";
 import { useTheme } from "../context/ThemeContext";
@@ -28,6 +31,7 @@ export default function Dashboard() {
   const [selected, setSelected] = useState(null);
   const [contacts, setContacts] = useState([]);
   const [messages, setMessages] = useState([]);
+  const searchRef = useRef(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [newMessage, setNewMessage] = useState("");
@@ -72,6 +76,19 @@ export default function Dashboard() {
     }
     fetchMessages();
   }, [selected]);
+
+  useEffect(() => {
+    function handleOutSideClick(event) {
+      if (searchRef.current && !searchRef.current.contains(event.target)) {
+        setSearchResults([]);
+        setSearchQuery("");
+      }
+    }
+    document.addEventListener("mousedown", handleOutSideClick);
+    return () => {
+      document.removeEventListener("mousedown", handleOutSideClick);
+    };
+  }, []);
 
   async function handleMessage(e) {
     e.preventDefault();
@@ -142,14 +159,23 @@ export default function Dashboard() {
         {showMenu && (
           <div className="absolute bg-gray-800 text-white shadow-2xl shadow-teal-500 rounded-2xl top-15 left-6">
             <ol className="flex flex-col">
-              <li className="hover:bg-white hover:text-black p-3 rounded-2xl cursor-pointer">
-                Settings
+              <li className="hover:bg-gray-500 hover:text-black p-3 rounded-2xl cursor-pointer flex justify-between">
+                <p>Settings</p>
+                <Settings />
               </li>
-              <li className="hover:bg-white hover:text-black p-3 rounded-2xl cursor-pointer">
+              <li className="hover:bg-gray-500 hover:text-black p-3 rounded-2xl cursor-pointer flex justify-between items-center gap-3">
                 <p>Theme</p>
+                <div className="flex rounded-2xl gap-3">
+                  <button className="cursor-pointer">
+                    <Sun />
+                  </button>
+                  <button className="cursor-pointer">
+                    <Moon />
+                  </button>
+                </div>
               </li>
               <button onClick={logout}>
-                <li className="hover:bg-white hover:text-black p-3 rounded-2xl  flex gap-4 cursor-pointer">
+                <li className="hover:bg-gray-500 hover:text-black p-3 rounded-2xl flex justify-between  cursor-pointer">
                   <p>Logout</p> <LogOut className="size-5" />{" "}
                 </li>
               </button>
@@ -169,7 +195,7 @@ export default function Dashboard() {
                 <Menu />
               </button>
 
-              <div className="relative">
+              <div ref={searchRef} className="relative">
                 <form
                   className="flex items-center gap-5 shrink-0 rounded-2xl border border-black"
                   onSubmit={handleSearch}
@@ -185,12 +211,12 @@ export default function Dashboard() {
                   />
                 </form>
                 {searchResults.length > 0 && (
-                  <div className="absolute top-full left-0 w-full z-50 bg-BackColor shadow-md shadow-black rounded-lg mt-2 max-h-60 overflow-y-auto">
+                  <div className="absolute top-full left-0 w-full z-50 bg-List shadow-md shadow-black rounded-lg max-h-60 overflow-y-auto">
                     {searchResults.map((person) => (
                       <div
                         key={person.id}
                         onClick={() => handleSelectUser(person)}
-                        className="p-3 hover:bg-gray-100 cursor-pointer"
+                        className="p-3 hover:bg-gray-400 cursor-pointer"
                       >
                         <p>{person.username}</p>
                       </div>
@@ -209,7 +235,7 @@ export default function Dashboard() {
                 contacts.map((conversation) => (
                   <div
                     key={conversation.id}
-                    className="hover:bg-mauve-500 rounded-2xl"
+                    className="hover:bg-gray-100 rounded-2xl"
                   >
                     <ContactCard
                       conversation={conversation}
